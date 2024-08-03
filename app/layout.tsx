@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MeshProviderApp } from "@/providers/meshProvider";
+import "@meshsdk/react/styles.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MeshProviderApp>{children}</MeshProviderApp>
+      </body>
     </html>
   );
 }
